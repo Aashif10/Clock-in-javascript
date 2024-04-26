@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  background-image: url("/red\ image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clock{
+  width: 500px;
+  height: 500px;
+  position: relative;
+  border: 10px solid darkred;
+  background-color:red;
+  box-shadow: 0 0 50px 20px inset black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+.clock span{
+transform: rotate(calc(30deg * var(--deg)));
+position: absolute;
+text-align: center;
+inset: 12px;
+font-size: 40px;
+color:white;
+}
+.clock span b{
+  transform: rotate(calc(-30deg * var(--deg)));
+  display: inline-block;
+}
+.dot{
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: gray;
+  /* z-index: 1; */
+}
+#hour,#minute,#second{
+  /* --rotate:0; */
+  position: absolute;
+  /* left: 50%; */
+  bottom: 50%;
+  /* transform: translate((-50%)rotate(calc(var(--rotate) * 1deg))); */
+  transform-origin: bottom;
+}
+#hour{
+  width: 8px;
+  height: 80px;
+  background-color: gray;
+  border-radius: 20px;
+
+}
+#minute{
+  width: 6px;
+  height: 120px;
+  background-color: gray;
+  border-radius: 20px;
+}
+#second{
+  width: 4px;
+  height: 150px;
+  background-color: gray;
+  border-radius: 20px;
+
+}
+
